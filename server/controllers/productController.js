@@ -69,3 +69,18 @@ export const deleteProduct = async (req, res) => {
     res.status(500).json({ message: error.message })
   }
 }
+
+// GET /api/products/slug/:slug
+export const getProductBySlug = async (req, res) => {
+  try {
+    const product = await Product.findOne({ slug: req.params.slug })
+
+    if (!product) {
+      return res.status(404).json({ message: 'Product not found' })
+    }
+
+    res.json(product)
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+}
