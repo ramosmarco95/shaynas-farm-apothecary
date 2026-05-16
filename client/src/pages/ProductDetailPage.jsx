@@ -1,8 +1,10 @@
+import useCartStore from '../context/cartStore'
 import { useParams, Link } from 'react-router-dom'
 import products from '../data/products'
 
 function ProductDetailPage() {
   const { id } = useParams()
+  const addToCart = useCartStore((state) => state.addToCart)
 
   // Find the product whose slug matches the URL
   const product = products.find((p) => p.slug === id)
@@ -23,6 +25,8 @@ function ProductDetailPage() {
       </div>
     )
   }
+
+  
 
   return (
     <div className="px-8 py-12 max-w-5xl mx-auto">
@@ -99,7 +103,15 @@ function ProductDetailPage() {
           </p>
 
           {/* Add to cart button */}
+          {/*<button
+            disabled={product.stock === 0}
+            className="bg-forest-shadow text-amber-canvas px-8 py-3 rounded-pill hover:bg-deep-earth transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2"
+          >
+            Add to Cart
+          </button>*/}
+
           <button
+            onClick={() => addToCart(product)}
             disabled={product.stock === 0}
             className="bg-forest-shadow text-amber-canvas px-8 py-3 rounded-pill hover:bg-deep-earth transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2"
           >

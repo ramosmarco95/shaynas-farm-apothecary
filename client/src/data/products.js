@@ -9,7 +9,7 @@ const products = [
     description: "Hand-crafted in small batches using organic lavender essential oil, raw beeswax, and cold-pressed olive oil. This salve softens dry skin and promotes calm. Perfect for hands, elbows, and restless nights.",
     ingredients: "Beeswax, Olive Oil, Lavender Essential Oil, Calendula Extract",
     size: "2 oz tin",
-    stock: 18,
+    stock: 0,
     imageUrl: "https://images.unsplash.com/photo-1612540139150-4b1b5a4b5b5a?w=600",
     isFeatured: true,
     createdAt: "2024-01-01",
