@@ -43,12 +43,30 @@ cd ../server
 npm install
 ```
 
-### Environment Variables
+## Environment Variables
 
-Create a `.env` file inside `/server` with the following:
+### Backend (`/server/.env`)
+Copy `server/.env.example` to `server/.env` and fill in your values.
 
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
+| Variable | Description |
+|---|---|
+| `PORT` | Port the Express server runs on (default: 5000) |
+| `MONGO_URI` | MongoDB Atlas connection string |
+| `CLIENT_URL` | Frontend URL allowed by CORS |
+| `ADMIN_KEY` | Secret key for admin API routes |
+
+### Frontend (`/client/.env`)
+Copy `client/.env.example` to `client/.env` and fill in your values.
+
+| Variable | Description |
+|---|---|
+| `VITE_API_URL` | Backend API base URL |
+| `VITE_ADMIN_KEY` | Must match server ADMIN_KEY |
+
+### Production
+Set these same variables in your deployment platform dashboards:
+- Frontend variables go in Vercel project settings
+- Backend variables go in Render service settings
 
 > ⚠️ Never commit `.env` files. They are listed in `.gitignore`.
 

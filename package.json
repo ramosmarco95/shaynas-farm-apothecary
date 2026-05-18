@@ -1,0 +1,15 @@
+{
+  "name": "shaynas-farm-apothecary",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce store for Shayna's Farm Apothecary",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "build": "cd client && npm run build",
+    "seed": "cd server && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

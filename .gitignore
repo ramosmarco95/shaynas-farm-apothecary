@@ -146,6 +146,7 @@ vite.config.ts.timestamp-*
 .env
 .env.local
 .env.production
+.env.development
 
 # Dependencies — these get reinstalled, never committed
 node_modules/
