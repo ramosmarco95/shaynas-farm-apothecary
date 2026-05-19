@@ -3,6 +3,11 @@
 A full-stack e-commerce store for a small farm apothecary brand selling
 handmade herbal goods, skincare, soaps, candles, teas, and natural products.
 
+## Live Demo
+
+**Frontend:** https://shaynas-farm-apothecary.vercel.app/  
+**API:** https://shaynas-farm-api.onrender.com
+
 ## Tech Stack
 
 **Frontend:** React, Vite, Tailwind CSS, React Router  
